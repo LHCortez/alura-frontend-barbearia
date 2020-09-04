@@ -1,5 +1,5 @@
 header {
-    background-color: lightgrey;
+    background-color: #888888;
     padding: 20px;
 }
 
@@ -32,4 +32,28 @@ header {
 .caixa nav a:hover {
     color: whitesmoke;
     text-decoration: underline;
+}
+
+
+@media screen and (max-width: 480px) {
+
+    .caixa {
+        position: relative;
+        width: auto;
+    }
+
+    .caixa nav {
+        position: relative;
+        top: 0px;
+        width: auto;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    nav {
+        position: static;
+    }
+
 }
