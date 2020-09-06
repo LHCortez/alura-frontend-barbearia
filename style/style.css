@@ -21,31 +21,32 @@ header {
 }
 
 .caixa {
-    /*! position: relative; */
     max-width: 940px;
     margin: 0 auto;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     padding: 10px;
-    /*! display: block; */
     overflow: hidden;
-    /*! align-content: flex-start; */
-    /*! z-index: -450; */
     position: relative;
 }
 
 .capa {
-    height: 900px;
+    height: 600px;
     background-image: url(../img/banner3.jpg);
     background-repeat: no-repeat;
     background-size: contain;
     background-size: cover;
-    /* width: 100vw; */
     background-position-y: center;
     background-position-x: center;
 }
 
 @media screen and (max-width: 600px) {
+    .capa {
+        height: 100vh;
+    }
+}
+
+@media screen and (max-height: 600px) {
     .capa {
         height: 100vh;
     }
@@ -60,7 +61,6 @@ header .caixa {
     overflow: unset;
     top: -24px;
     padding: 0px 10px;
-    /* display: inline-block; */
 }
 
 @media screen and (max-width: 600px) {
@@ -84,8 +84,6 @@ header nav {
         line-height: 30px;
         right: unset;
         top: 29px;
-        /* margin-left: 12px; */
-        /* text-align: center; */
     }
 }
 
@@ -109,15 +107,15 @@ header nav a {
     font-family: 'Montserrat', sans-serif;
 }
 
-header nav a:hover {
-    color: whitesmoke;
-    text-decoration: underline;
+header nav a:hover,
+header nav a:active {
+    opacity: 0.6;
 }
 
 .titulo {
     display: table-cell;
     max-width: 940px;
-    height: 50vh;
+    height: 320px;
     margin: 0 auto;
     vertical-align: middle;
 }
@@ -128,24 +126,20 @@ header nav a:hover {
     }
 }
 
+@media screen and (max-height: 450px) {
+    .titulo {
+        display: none;
+    }
+}
+
 h1 {
     color: #f0eeef;
     font-size: 100px;
-    /* font-family: Arial, Helvetica, sans-serif; */
     font-family: 'Abril Fatface', cursive;
-    /* line-height: 80px; */
-    /* margin-top: 210px; */
-    /* font-weight: bold; */
     line-height: .9em;
     letter-spacing: -.03em;
     text-shadow: 5px 5px 5px black;
 }
-
-/* @media screen and (max-width: 670px) {
-    h1 {
-        font-size: 60px;
-    }
-} */
 
 /* css da página da home */
 
@@ -157,10 +151,8 @@ main {
 }
 
 .principal {
-    /* background: #fefefe; */
     width: 100%;
     margin: 0 auto;
-    /* z-index: 1; */
 }
 
 .titulo-principal {
@@ -335,10 +327,6 @@ main {
     border-color: rgb(82, 30, 17);
 }
 
-/* .produtos li:hover h2 {
-    font-size: 34px;
-} */
-
 .produtos img {
     width: 100%;
     height: auto;
@@ -358,7 +346,7 @@ main {
 /*css da página contato*/
 
 .contato {
-    background-image: url(../img/telefone.jpg);
+    background-image: url(../img/telefone2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: center;
